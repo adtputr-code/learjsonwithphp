@@ -1,5 +1,6 @@
 //mengambil file json
 function tampilkanSemuaMenu(){
+  $('#daftar-menu').html('');
   $.getJSON('data/pizza.json', function(data){
     let menu = data.menu;
     //lopping data
@@ -22,6 +23,7 @@ $('.nav-link').on('click', function(){
 
   if (kategori == 'All Menu') {
     tampilkanSemuaMenu();
+
     return;
   }
 
